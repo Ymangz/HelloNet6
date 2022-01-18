@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloNet6", "HelloNet6\HelloNet6.csproj", "{FFB4E0EC-7F84-42CA-9C3D-C51E8073CC45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloNet6", "HelloNet6\HelloNet6.csproj", "{FFB4E0EC-7F84-42CA-9C3D-C51E8073CC45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloNet6.Entity", "HelloNet6.Entity\HelloNet6.Entity.csproj", "{FB69FC10-2B5A-4945-A7F6-3D678BD8BF16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloNet6.Module", "HelloNet6.Module\HelloNet6.Module.csproj", "{EC488BD8-7C5F-401A-9036-3C8414B4C26D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FFB4E0EC-7F84-42CA-9C3D-C51E8073CC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFB4E0EC-7F84-42CA-9C3D-C51E8073CC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFB4E0EC-7F84-42CA-9C3D-C51E8073CC45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB69FC10-2B5A-4945-A7F6-3D678BD8BF16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB69FC10-2B5A-4945-A7F6-3D678BD8BF16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB69FC10-2B5A-4945-A7F6-3D678BD8BF16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB69FC10-2B5A-4945-A7F6-3D678BD8BF16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC488BD8-7C5F-401A-9036-3C8414B4C26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC488BD8-7C5F-401A-9036-3C8414B4C26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC488BD8-7C5F-401A-9036-3C8414B4C26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC488BD8-7C5F-401A-9036-3C8414B4C26D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
