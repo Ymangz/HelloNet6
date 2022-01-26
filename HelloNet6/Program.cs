@@ -4,6 +4,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using HelloNet6;
 using HelloNet6.Filters;
+using HelloNet6.JsonConverters;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
@@ -25,6 +26,7 @@ builder.Services
     })
     .AddJsonOptions(cfg =>
     {
+        cfg.JsonSerializerOptions.Converters.Add(new DateTimeJsonConverter());
         cfg.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
     })
     .ConfigureApiBehaviorOptions(options =>
@@ -37,14 +39,13 @@ builder.Services
         };
     });
 builder.Services.AddSwaggerGen();
+// builder.Services.AddDbContextPool<>();
+
 builder.Host.UseSerilog();
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(
-    b =>
-    {
-        b.RegisterModule<DefaultModuleRegister>();
-    }
-    );
+    b => { b.RegisterModule<DefaultModuleRegister>(); }
+);
 
 var app = builder.Build();
 

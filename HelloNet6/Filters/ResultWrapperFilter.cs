@@ -14,9 +14,9 @@ public class ResultWrapperFilter : IActionFilter
     {
         if (context.Result is ObjectResult r)
         {
-            if (r.Value is not ResultDtoBase<dynamic>)
+            if (r.Value is not ResultVoBase<dynamic>)
             {
-                context.Result = new JsonResult(ResultDtoBase<dynamic>.CreateSucceedResult(r.Value));
+                context.Result = new JsonResult(ResultVoBase<dynamic>.CreateSucceedResult(r.Value));
             }
         }
         else if (context.Result is EmptyResult)

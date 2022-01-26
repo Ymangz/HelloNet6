@@ -11,9 +11,9 @@ public class ExceptionHandlerFilter : IAsyncExceptionFilter
     {
         if (context.ExceptionHandled == false)
         {
-            LogTo.Information("{0}",context.Exception.GetType());
+            LogTo.Information("{0}", context.Exception.GetType());
 
-            context.Result = new JsonResult(ResultDtoBase<dynamic>.CreateErrorResult(context.Exception.Message));
+            context.Result = new JsonResult(ResultVoBase<dynamic>.CreateErrorResult(context.Exception.Message));
         }
         context.ExceptionHandled = true; //异常已处理了
         return Task.CompletedTask;

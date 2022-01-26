@@ -5,7 +5,7 @@ namespace HelloNet6.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class HelloNet6Controller : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {

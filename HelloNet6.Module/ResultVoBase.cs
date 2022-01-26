@@ -2,7 +2,7 @@
 
 namespace HelloNet6.Module
 {
-    public record ResultDtoBase<T>
+    public record ResultVoBase<T>
     {
         public HttpStatusCode Code { get; init; }
 
@@ -12,9 +12,9 @@ namespace HelloNet6.Module
 
         public T Data { get; init; } = default!;
 
-        public static ResultDtoBase<T> CreateErrorResult(string msg, HttpStatusCode code = HttpStatusCode.InternalServerError)
+        public static ResultVoBase<T> CreateErrorResult(string msg, HttpStatusCode code = HttpStatusCode.InternalServerError)
         {
-            return new ResultDtoBase<T>
+            return new ResultVoBase<T>
             {
                 Code = code,
                 Result = false,
@@ -22,9 +22,9 @@ namespace HelloNet6.Module
             };
         }
 
-        public static ResultDtoBase<T> CreateSucceedResult(T data, string? msg = null)
+        public static ResultVoBase<T> CreateSucceedResult(T data, string? msg = null)
         {
-            return new ResultDtoBase<T>
+            return new ResultVoBase<T>
             {
                 Code = HttpStatusCode.OK,
                 Result = true,
